@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/660194066884321990/b83db0252b2c4996980bcb40de124c1c/artifacts
+end_time: 1738605876448
+entry_point_name: ''
+experiment_id: '660194066884321990'
+lifecycle_stage: active
+run_id: b83db0252b2c4996980bcb40de124c1c
+run_name: LR
+run_uuid: b83db0252b2c4996980bcb40de124c1c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738605873719
+status: 3
+tags: []
+user_id: vss

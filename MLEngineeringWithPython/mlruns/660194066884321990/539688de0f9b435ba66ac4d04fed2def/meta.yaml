@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/660194066884321990/539688de0f9b435ba66ac4d04fed2def/artifacts
+end_time: 1738605883385
+entry_point_name: ''
+experiment_id: '660194066884321990'
+lifecycle_stage: active
+run_id: 539688de0f9b435ba66ac4d04fed2def
+run_name: SVC
+run_uuid: 539688de0f9b435ba66ac4d04fed2def
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738605881090
+status: 3
+tags: []
+user_id: vss
