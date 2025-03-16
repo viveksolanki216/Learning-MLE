@@ -1,7 +1,9 @@
 
 
 # Git: Version Control Sytem
- 
+
+video link: [Git: Version Control System](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
+
 #### Why need a VCS?
 Records the changes made to the code overtime in a special database called repository. We can see who has made the 
 changes, when and what changes were made. And if something goes south we can revert back to previous state of the code.
@@ -97,7 +99,10 @@ We don't want to track some files in the project directory. i.e. log files, temp
 
 #### How to delete a already staged and committed file/dir and add into .gitignore:
 Adding a file/dir into .gitignore will not remove it from the staging area or repository. We have to remove it manually.
-
+- `git ls-files`. To see if the file/dir we want to remove is in stagin area.
+- `git rm --cached -r bin/` to remove the bin directory from the staging area (indexed dir)
+- `git ls-fies` you will see that the bin directory is removed from the staging area.
+- `git status` to see the changes.  
 
 #### Git Commit:
 Git doesn't store the deltas, it stores the full content every time we commit the changes. But git is very efficient in
@@ -113,7 +118,21 @@ Each commit contains following things
 **Commiting best practices:**
 - Commit often. i.e. different commits for different features. i.e. bug fix, feature addition, typo.
 
-**Do we need to add the changes to the staging area everytime before commit?**
+#### Git Log:
+- `git log` to see the history of commits.
+- `git log --oneline` to see the history of commits in one line.
+- `git log --oneline --graph` to see the history of commits in one line with graph.
+
+#### Do we need to add the changes to the staging area everytime before commit?**
 - No, we can directly commit the changes to the repository using `git commit -am "message"`. This will add all the changes to the staging area and commit them to the repository.
 - But this is not recommended as we can't review the changes before committing them to the repository.
 
+#### Push the local repository to remote repository on Github:
+- First generate a ssh key pair or use the existing one.
+- start the ssh-agent using `eval "$(ssh-agent -s)"`
+- Copy the public key using `pbcopy < ~/.ssh/id_rsa.pub` and paste it in the github settings.
+- `ssh -T git@github.com` to test the connection.
+- Create a repository on Github.
+- `git remote add origin git@github.com:viveksolanki216/REPONAME.git`
+- `git branch -M main`
+- `git push -u origin main`
