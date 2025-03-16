@@ -3,3 +3,4 @@ MLFlow/enviornment.yml
 MLFlow/input_data/
 MLFlow/mlartifacts/
 MLFlow/store_data_forecast.png
+bin/.bin
