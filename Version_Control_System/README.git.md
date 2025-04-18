@@ -130,9 +130,16 @@ Each commit contains following things
 #### Push the local repository to remote repository on Github:
 - First generate a ssh key pair or use the existing one.
 - start the ssh-agent using `eval "$(ssh-agent -s)"`
+- `cat ~/.ssh/config` to check which private key has been added to the ssh-agent.
 - Copy the public key using `pbcopy < ~/.ssh/id_rsa.pub` and paste it in the github settings.
 - `ssh -T git@github.com` to test the connection.
 - Create a repository on Github.
 - `git remote add origin git@github.com:viveksolanki216/REPONAME.git`
 - `git branch -M main`
 - `git push -u origin main`
+
+#### Issue with https git urls
+https git urls asks for username and passwords everytime you push the changes to the remote repository, even if you had setup the ssh key.
+You need to set the ssh url to it i.e.
+- `git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+`
